@@ -26,6 +26,7 @@ jobs:
           git config --global user.email "njkznu@gmail.com"
           git config --global user.name "kuzanatoliy"
           npm version minor
+          git push
           git push --tags
           git add -f dist
           git commit -am "deploy to gh-pages"
