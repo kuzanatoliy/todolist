@@ -6,6 +6,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
+    "plugin:solid/recommended",
     'prettier',
   ],
   parser: '@typescript-eslint/parser',
@@ -16,6 +17,6 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['@typescript-eslint', 'prettier'],
+  plugins: ['@typescript-eslint', 'solid', 'prettier'],
   rules: {},
 };
