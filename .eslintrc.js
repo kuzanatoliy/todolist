@@ -18,5 +18,16 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['@typescript-eslint', 'solid', 'prettier'],
-  rules: {},
+  rules: {
+    'solid/components-return-once': 2,
+    'solid/event-handlers': 2,
+    'solid/imports': 2,
+    'solid/jsx-no-duplicate-props': 2,
+    'solid/jsx-no-script-url': 2,
+    'solid/jsx-no-undef': 2,
+    'solid/jsx-uses-vars': 2,
+    'solid/no-array-handlers': 1,
+    'solid/no-destructure': 2,
+    'solid/no-innerhtml': [2, { allowStatic: false }],
+  },
 };
