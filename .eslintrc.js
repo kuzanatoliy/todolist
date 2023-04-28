@@ -35,5 +35,8 @@ module.exports = {
     'solid/no-unknown-namespaces': 2,
     'solid/prefer-for': 2,
     'solid/prefer-show': 1,
+    'solid/reactivity': 2,
+    'solid/self-closing-comp': 2,
+    'solid/style-prop': 2,
   },
 };
