@@ -1,0 +1,94 @@
+[
+  {
+    "name": "purpose1",
+    "description": "Description of the purpose1",
+    "status": "active",
+    "actions": [
+      {
+        "name": "action1",
+        "isCompleted": true
+      },
+      {
+        "name": "action2",
+        "isCompleted": true
+      },
+      {
+        "name": "action3",
+        "isCompleted": false
+      },
+      {
+        "name": "action4",
+        "isCompleted": false
+      }
+    ]
+  },
+  {
+    "name": "purpose2",
+    "description": "Description of the purpose2",
+    "status": "done",
+    "actions": [
+      {
+        "name": "action1",
+        "isCompleted": true
+      },
+      {
+        "name": "action2",
+        "isCompleted": true
+      },
+      {
+        "name": "action3",
+        "isCompleted": false
+      },
+      {
+        "name": "action4",
+        "isCompleted": false
+      }
+    ]
+  },
+  {
+    "name": "purpose3",
+    "description": "Description of the purpose3",
+    "status": "closed",
+    "actions": [
+      {
+        "name": "action1",
+        "isCompleted": true
+      },
+      {
+        "name": "action2",
+        "isCompleted": true
+      },
+      {
+        "name": "action3",
+        "isCompleted": false
+      },
+      {
+        "name": "action4",
+        "isCompleted": false
+      }
+    ]
+  },
+  {
+    "name": "purpose4",
+    "description": "Description of the purpose4",
+    "status": "draft",
+    "actions": [
+      {
+        "name": "action1",
+        "isCompleted": true
+      },
+      {
+        "name": "action2",
+        "isCompleted": true
+      },
+      {
+        "name": "action3",
+        "isCompleted": false
+      },
+      {
+        "name": "action4",
+        "isCompleted": false
+      }
+    ]
+  }
+]
