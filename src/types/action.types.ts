@@ -13,6 +13,6 @@ export enum EPurposeStatus {
 export interface IPurpose {
   name: string;
   description: string;
-  status: unknown;
+  status: boolean;
   actions: IPurposeAction[];
 }
