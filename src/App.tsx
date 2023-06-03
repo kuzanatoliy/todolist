@@ -2,7 +2,7 @@ import { For, createResource } from 'solid-js';
 
 import type { TComponent, IPurpose } from 'src/types';
 import { purposeModel } from 'src/models';
-import { Card, List, ListItem } from 'src/components';
+import { Card, List, ListItem, PageTitle } from 'src/components';
 
 import styles from './App.module.scss';
 
@@ -22,6 +22,7 @@ const App: TComponent = () => {
         <h1 class={styles.headerTitle}>Todolist</h1>
       </header>
       <main class={styles.mainContainer}>
+        <PageTitle>List of purposes</PageTitle>
         <List>
           <For each={purposeList()}>
             {({ name, description, status, actions }) => (
