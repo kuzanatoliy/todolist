@@ -1,7 +1,8 @@
 import { For, createResource } from 'solid-js';
 
-import { purposeModel } from 'src/models';
 import type { TComponent, IPurpose } from 'src/types';
+import { purposeModel } from 'src/models';
+import { List, ListItem } from 'src/components';
 
 import styles from './App.module.scss';
 
@@ -17,27 +18,27 @@ const App: TComponent = () => {
 
   return (
     <div class={styles.App}>
-      <ul>
+      <List>
         <For each={purposeList()}>
           {({ name, description, status, actions }) => (
-            <li>
+            <ListItem>
               <h3>{name}</h3>
               <p>{description}</p>
               <p>{status}</p>
-              <ul>
+              <List>
                 <For each={actions}>
                   {({ name, isCompleted }) => (
-                    <li>
+                    <ListItem>
                       <h4>{name}</h4>
                       <p>{isCompleted}</p>
-                    </li>
+                    </ListItem>
                   )}
                 </For>
-              </ul>
-            </li>
+              </List>
+            </ListItem>
           )}
         </For>
-      </ul>
+      </List>
     </div>
   );
 };
