@@ -17,28 +17,34 @@ const App: TComponent = () => {
   setTimeout(() => purposeListActions.refetch(), 5000);
 
   return (
-    <div class={styles.App}>
-      <List>
-        <For each={purposeList()}>
-          {({ name, description, status, actions }) => (
-            <ListItem>
-              <h3>{name}</h3>
-              <p>{description}</p>
-              <p>{status}</p>
-              <List>
-                <For each={actions}>
-                  {({ name, isCompleted }) => (
-                    <ListItem>
-                      <h4>{name}</h4>
-                      <p>{isCompleted}</p>
-                    </ListItem>
-                  )}
-                </For>
-              </List>
-            </ListItem>
-          )}
-        </For>
-      </List>
+    <div class={styles.container}>
+      <header class={styles.headerContainer}>
+        <h1 class={styles.headerTitle}>Todolist</h1>
+      </header>
+      <main class={styles.mainContainer}>
+        <List>
+          <For each={purposeList()}>
+            {({ name, description, status, actions }) => (
+              <ListItem>
+                <h3>{name}</h3>
+                <p>{description}</p>
+                <p>{status}</p>
+                <List>
+                  <For each={actions}>
+                    {({ name, isCompleted }) => (
+                      <ListItem>
+                        <h4>{name}</h4>
+                        <p>{isCompleted}</p>
+                      </ListItem>
+                    )}
+                  </For>
+                </List>
+              </ListItem>
+            )}
+          </For>
+        </List>
+      </main>
+      <footer class={styles.footerContainer}>© Kuzanatoliorg 2023</footer>
     </div>
   );
 };

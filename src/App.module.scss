@@ -1,3 +1,38 @@
-.App {
+@mixin indentation {
+  margin: 0;
+  padding: var(--size-double)
+    calc((100% - var(--breakpoint-laptop)) / 2 + var(--size-double));
+}
+
+.headerContainer {
+  @include indentation;
+
+  position: sticky;
+  top: 0;
+  background: var(--color-darkest);
+  box-shadow: 0 var(--size-double) var(--size-double) var(--color-lightest);
+}
+
+.headerTitle {
+  margin: 0;
+  color: var(--color-lightest);
+}
+
+.mainContainer {
+  @include indentation;
+}
+
+.footerContainer {
+  @include indentation;
+
   text-align: center;
+  position: sticky;
+  bottom: 0;
+  background: linear-gradient(transparent, var(--color-lightest) 25%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-lightest);
 }
