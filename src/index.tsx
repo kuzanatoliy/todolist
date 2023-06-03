@@ -1,8 +1,10 @@
 /* @refresh reload */
 import { render } from 'solid-js/web';
 
-import './theme.scss';
 import App from './App';
+
+import './theme.scss';
+import './index.scss';
 
 const root = document.getElementById('root');
 

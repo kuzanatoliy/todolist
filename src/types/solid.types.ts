@@ -1,1 +1,4 @@
-export type { Component as TComponent } from 'solid-js';
+export type {
+  Component as TComponent,
+  ParentComponent as TParentComponent,
+} from 'solid-js';

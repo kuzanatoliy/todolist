@@ -1,7 +1,8 @@
 import { For, createResource } from 'solid-js';
 
-import { purposeModel } from './models';
-import { TComponent, IPurpose } from './types';
+import { purposeModel } from 'src/models';
+import type { TComponent, IPurpose } from 'src/types';
+
 import styles from './App.module.scss';
 
 const App: TComponent = () => {
