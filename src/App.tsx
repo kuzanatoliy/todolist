@@ -2,7 +2,7 @@ import { For, createResource } from 'solid-js';
 
 import type { TComponent, IPurpose } from 'src/types';
 import { purposeModel } from 'src/models';
-import { Card, List, ListItem, PageTitle } from 'src/components';
+import { Card, List, ListItem, PageTitle } from 'src/atoms';
 
 import styles from './App.module.scss';
 
