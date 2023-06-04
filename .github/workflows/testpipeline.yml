@@ -42,7 +42,7 @@ jobs:
           git push
           git push --tags
           git branch -a
-          git checkout gh-pages
+          git checkout refs/heads/gh-pages
           cd -R dist/* .
           rm -R node_modules
           rm -R dist
