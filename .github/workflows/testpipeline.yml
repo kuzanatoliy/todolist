@@ -39,12 +39,14 @@ jobs:
         run: |
           git config --global user.email "njkznu@gmail.com"
           git config --global user.name "kuzanatoliy"
-          npm version minor
           git push
           git push --tags
+          git branch -a
           git checkout gh-pages
           cd -R dist/* .
           rm -R node_modules
           rm -R dist
           git commit -am "master build"
           git push
+
+# npm version minor
