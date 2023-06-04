@@ -1,25 +1,53 @@
-import type { Component } from 'solid-js';
+import { For, createResource } from 'solid-js';
 
-import logo from './logo.svg';
+import type { TComponent, IPurpose } from 'src/types';
+import { purposeModel } from 'src/models';
+import { Card, List, ListItem, PageTitle } from 'src/atoms';
+
 import styles from './App.module.scss';
 
-const App: Component = () => {
+const App: TComponent = () => {
+  const [purposeList, purposeListActions] = createResource<IPurpose[]>(
+    purposeModel.get,
+    {
+      initialValue: [],
+    }
+  );
+
+  setTimeout(() => purposeListActions.refetch(), 5000);
+
   return (
-    <div class={styles.App}>
-      <header class={styles.header}>
-        <img src={logo} class={styles.logo} alt='logo' />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          class={styles.link}
-          href='https://github.com/solidjs/solid'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn Solid
-        </a>
+    <div class={styles.container}>
+      <header class={styles.headerContainer}>
+        <h1 class={styles.headerTitle}>Todolist</h1>
       </header>
+      <main class={styles.mainContainer}>
+        <PageTitle>List of purposes</PageTitle>
+        <List>
+          <For each={purposeList()}>
+            {({ name, description, status, actions }) => (
+              <ListItem>
+                <Card>
+                  <h3>{name}</h3>
+                  <p>{description}</p>
+                  <p>{status}</p>
+                  <List>
+                    <For each={actions}>
+                      {({ name, isCompleted }) => (
+                        <ListItem>
+                          <h4>{name}</h4>
+                          <p>{isCompleted}</p>
+                        </ListItem>
+                      )}
+                    </For>
+                  </List>
+                </Card>
+              </ListItem>
+            )}
+          </For>
+        </List>
+      </main>
+      <footer class={styles.footerContainer}>© Kuzanatoliorg 2023</footer>
     </div>
   );
 };

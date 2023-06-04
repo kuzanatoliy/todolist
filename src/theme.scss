@@ -1,0 +1,20 @@
+:root {
+  --color-darkest: #003B46;
+  --color-dark: #07575B;
+  --color-normal: #66A5AD;
+  --color-light: #C4DFE6;
+  --color-lightest: #fff;
+
+  --size-quarter: 0.125rem;
+  --size-half: 0.25rem;
+  --size-three-quarters: 0.375rem;
+  --size-single: 0.5rem;
+  --size-double: 1rem;
+  --size-triple: 2rem;
+
+  --breakpoint-laptop: 1024px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-mobile-l: 425px;
+  --breakpoint-mobile-m: 375px;
+  --breakpoint-mobile-s: 320px;
+}
