@@ -28,8 +28,8 @@ export interface ButtonProps {
  * Primary UI component for user interaction
  */
 export const Button: Component<ButtonProps> = (props) => {
-  props = mergeProps({ size: 'small' as ButtonProps['size'] }, props);
-  const [local, rest] = splitProps(props, [
+  const newProps = mergeProps({ size: 'small' as ButtonProps['size'] }, props);
+  const [local, rest] = splitProps(newProps, [
     'primary',
     'size',
     'backgroundColor',
@@ -39,7 +39,7 @@ export const Button: Component<ButtonProps> = (props) => {
   return (
     <button
       {...rest}
-      type="button"
+      type='button'
       classList={{
         'storybook-button--small': local.size === 'small',
         'storybook-button--medium': local.size === 'medium',
