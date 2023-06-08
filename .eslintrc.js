@@ -8,6 +8,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:solid/recommended',
     'prettier',
+    'plugin:storybook/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -24,11 +25,21 @@ module.exports = {
     'solid/imports': 2,
     'solid/jsx-no-duplicate-props': 2,
     'solid/jsx-no-script-url': 2,
-    'solid/jsx-no-undef': [2, { typescriptEnabled: true }],
+    'solid/jsx-no-undef': [
+      2,
+      {
+        typescriptEnabled: true,
+      },
+    ],
     'solid/jsx-uses-vars': 2,
     'solid/no-array-handlers': 1,
     'solid/no-destructure': 2,
-    'solid/no-innerhtml': [2, { allowStatic: false }],
+    'solid/no-innerhtml': [
+      2,
+      {
+        allowStatic: false,
+      },
+    ],
     'solid/no-proxy-apis': 1,
     'solid/no-react-deps': 2,
     'solid/no-react-specific-props': 2,

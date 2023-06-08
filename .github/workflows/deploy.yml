@@ -34,7 +34,10 @@ jobs:
       - name: install dependencies
         run: yarn install
       - name: build
-        run: yarn run build -- --base todolist
+        run: |
+          yarn run build -- --base todolist
+          yarn run build-storybook
+          mv ./storybook-static ./dist
       - name: deploy
         run: |
           git config --global user.email "njkznu@gmail.com"
@@ -42,6 +45,7 @@ jobs:
           npm version minor
           git push
           git push --tags
+          echo >> dist/.nojekyll
           git add -f dist
           git commit -am "deploy to gh-pages"
           git push origin `git subtree split --prefix dist`:refs/heads/gh-pages --force
