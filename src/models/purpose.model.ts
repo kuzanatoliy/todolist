@@ -1,6 +1,6 @@
 import type { IPurpose } from 'src/types';
 
-export const BASE_URL = '/data';
+export const BASE_URL = './data';
 
 export const purposeModel = {
   get: (): Promise<IPurpose[]> =>

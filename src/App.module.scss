@@ -20,6 +20,8 @@
 
 .mainContainer {
   @include indentation;
+
+  flex: 1;
 }
 
 .footerContainer {
@@ -32,6 +34,7 @@
 }
 
 .container {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   background: var(--color-lightest);
