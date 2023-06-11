@@ -43,7 +43,7 @@ jobs:
           ref: gh-pages
       - name: test
         run: |
-          git branch
+          git branch -a
           dir
       # - name: deploy
       #  run: |
