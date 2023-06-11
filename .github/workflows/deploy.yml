@@ -27,6 +27,8 @@ jobs:
         node-version: [18.x]
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: [github.ref_name, gh-pages]
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
@@ -38,9 +40,6 @@ jobs:
           yarn run build -- --base todolist
           yarn run build-storybook
           mv ./storybook-static ./dist
-      - uses: actions/checkout@v3
-        with:
-          ref: gh-pages
       - name: test
         run: |
           git branch -a
