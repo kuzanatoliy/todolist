@@ -1,0 +1,75 @@
+.chip {
+  width: fit-content;
+  padding: var(--size-half) var(--size-single);
+  border-radius: var(--size-quadruple);
+  border-style: solid;
+  border-width: 1px;
+
+  &__filled {
+    &__darkest {
+      background-color: var(--color-darkest);
+      border-color: var(--color-darkest);
+      color: var(--color-lightest);
+    }
+
+    &__dark {
+      background-color: var(--color-dark);
+      border-color: var(--color-dark);
+      color: var(--color-lightest);
+    }
+
+    &__normal {
+      background-color: var(--color-normal);
+      border-color: var(--color-normal);
+      color: var(--color-lightest);
+    }
+
+    &__light {
+      background-color: var(--color-light);
+      border-color: var(--color-light);
+      color: var(--color-darkest);
+    }
+
+    &__lightest {
+      background-color: var(--color-lightest);
+      border-color: var(--color-lightest);
+      color: var(--color-darkest);
+    }
+  }
+
+  &__outlined {
+    &__darkest {
+      border-color: var(--color-darkest);
+      color: var(--color-darkest);
+    }
+
+    &__dark {
+      border-color: var(--color-dark);
+      color: var(--color-dark);
+    }
+
+    &__normal {
+      border-color: var(--color-normal);
+      color: var(--color-normal);
+    }
+
+    &__light {
+      border-color: var(--color-light);
+      color: var(--color-light);
+    }
+
+    &__lightest {
+      border-color: var(--color-lightest);
+      color: var(--color-lightest);
+    }
+  }
+}
+
+/*export const enum EChipColorScheme {
+  DEFAULT = 'normal',
+  DARKEST = 'darkest',
+  DARK = 'dark',
+  NORMAL = 'normal',
+  LIGHT = 'light',
+  LIGHTEST = 'lightest',
+}*/

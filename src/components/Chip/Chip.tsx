@@ -4,7 +4,7 @@ import { TComponent } from 'src/types';
 
 import { EChipVariant, EChipColorScheme } from './Chip.types';
 
-// import styles from './Card.module.scss';
+import styles from './Chip.module.scss';
 
 export interface IChipProps {
   text?: string;
@@ -21,5 +21,13 @@ const defaultProps = {
 export const Chip: TComponent<IChipProps> = (props) => {
   const mergedProps = mergeProps(defaultProps, props);
 
-  return <div>{mergedProps.text}</div>;
+  return (
+    <div
+      class={`${styles.chip} ${
+        styles[`chip__${props.variant}__${props.colorScheme}`]
+      }`}
+    >
+      {mergedProps.text}
+    </div>
+  );
 };
