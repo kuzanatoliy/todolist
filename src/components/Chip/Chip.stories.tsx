@@ -1,3 +1,4 @@
+import { For } from 'solid-js';
 import type { Meta, StoryObj } from 'storybook-solidjs';
 
 import { EChipColorScheme, EChipVariant } from './Chip.types';
@@ -55,6 +56,50 @@ export const Default: Story = {
   args: {
     text: meta.argTypes.text.table.defaultValue.summary,
     variant: meta.argTypes.variant.table.defaultValue.summary,
+    colorScheme: meta.argTypes.colorScheme.table.defaultValue.summary,
+  },
+};
+
+export const Variant: Story = {
+  render: (props) => (
+    <div style={{ display: 'flex', gap: '16px' }}>
+      <For each={meta.argTypes.colorScheme.options.slice(1)}>
+        {(colorScheme) => (
+          <Chip text='chip' variant={props.variant} colorScheme={colorScheme} />
+        )}
+      </For>
+    </div>
+  ),
+  argTypes: {
+    ...Object.keys(meta.argTypes).reduce<Record<string, unknown>>(
+      (prev, curr) => {
+        prev[curr] = { control: false };
+        return prev;
+      },
+      {}
+    ),
+    variant: meta.argTypes.variant.table.defaultValue.summary,
+  },
+};
+
+export const ColorScheme: Story = {
+  render: (props) => (
+    <div style={{ display: 'flex', gap: '16px' }}>
+      <For each={meta.argTypes.variant.options.slice(1)}>
+        {(variant) => (
+          <Chip text='chip' variant={variant} colorScheme={props.colorScheme} />
+        )}
+      </For>
+    </div>
+  ),
+  argTypes: {
+    ...Object.keys(meta.argTypes).reduce<Record<string, unknown>>(
+      (prev, curr) => {
+        prev[curr] = { control: false };
+        return prev;
+      },
+      {}
+    ),
     colorScheme: meta.argTypes.colorScheme.table.defaultValue.summary,
   },
 };

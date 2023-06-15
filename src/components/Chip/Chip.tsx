@@ -24,7 +24,7 @@ export const Chip: TComponent<IChipProps> = (props) => {
   return (
     <div
       class={`${styles.chip} ${
-        styles[`chip__${props.variant}__${props.colorScheme}`]
+        styles[`chip__${mergedProps.variant}__${mergedProps.colorScheme}`]
       }`}
     >
       {mergedProps.text}
