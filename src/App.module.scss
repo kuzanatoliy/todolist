@@ -2,6 +2,10 @@
   margin: 0;
   padding: var(--size-double)
     calc((100% - var(--breakpoint-laptop)) / 2 + var(--size-double));
+
+  @media (max-width: 1056px) {
+    padding: var(--size-double);
+  }
 }
 
 .headerContainer {
