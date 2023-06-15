@@ -1,5 +1,12 @@
+import 'src/theme.scss';
+
 const preview = {
   parameters: {
+    docs: {
+      source: {
+        code: null,
+      },
+    },
     actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
       matchers: {
