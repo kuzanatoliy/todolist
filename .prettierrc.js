@@ -21,4 +21,5 @@ module.exports = {
   // vueIndentScriptAndStyle: false,
   endOfLine: 'lf',
   embeddedLanguageFormatting: 'off',
+  singleAttributePerLine: false,
 };
