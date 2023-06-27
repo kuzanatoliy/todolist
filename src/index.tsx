@@ -14,5 +14,19 @@ if (import.meta.env.DEV && !(root instanceof HTMLElement)) {
   );
 }
 
-// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-render(() => <App />, root!);
+const renderRoot = () => {
+  if (root) {
+    root.textContent = '';
+  }
+
+  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+  render(() => <App />, root!);
+};
+
+const delay = 1000 - (Date.now() - window.performance.timeOrigin);
+
+if (delay > 0) {
+  setTimeout(renderRoot, delay);
+} else {
+  renderRoot();
+}
