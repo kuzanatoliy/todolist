@@ -20,6 +20,8 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'solid', 'prettier'],
   rules: {
+    'prettier/prettier': [2, require('./.prettierrc.js')],
+
     'solid/components-return-once': 2,
     'solid/event-handlers': 2,
     'solid/imports': 2,
