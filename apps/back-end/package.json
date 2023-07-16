@@ -1,0 +1,20 @@
+{
+  "name": "@kuzanatoliorg/todolist-back-end",
+  "version": "0.2.2",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "start": "node --inspect=5858 -r dotenv/config -r ts-node/register src",
+    "start:dev": "ts-node-dev --inspect=5858 -r dotenv/config src",
+    "start:dist": "node -r dotenv/config dist",
+    "test": "echo test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^18.16.19",
+    "dotenv": "^16.3.1",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.1.6"
+  }
+}
