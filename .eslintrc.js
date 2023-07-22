@@ -8,7 +8,6 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:solid/recommended',
     'prettier',
-    'plugin:storybook/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -52,4 +51,25 @@ module.exports = {
     'solid/self-closing-comp': 2,
     'solid/style-prop': 2,
   },
+  overrides: [
+    {
+      files: ['**/*{stories,story}.{ts,tsx}'],
+      extends: ['plugin:storybook/recommended'],
+      rules: {
+        'storybook/await-interactions': 2,
+        'storybook/context-in-play-function': 2,
+        'storybook/csf-component': 2,
+        'storybook/default-exports': 2,
+        'storybook/hierarchy-separator': 2,
+        'storybook/no-redundant-story-name': 2,
+        'storybook/no-stories-of': 2,
+        'storybook/no-title-property-in-meta': 0,
+        'storybook/no-uninstalled-addons': 2,
+        'storybook/prefer-pascal-case': 2,
+        'storybook/story-exports': 2,
+        'storybook/use-storybook-expect': 0,
+        'storybook/use-storybook-testing-library': 2,
+      },
+    },
+  ],
 };
