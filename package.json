@@ -8,6 +8,7 @@
     "build": "vite build",
     "serve": "vite preview",
     "lint": "eslint src/**/*.{ts,tsx}",
+    "commitlint": "commitlint --edit",
     "prettier:check": "prettier --check .",
     "test": "vitest run --coverage",
     "storybook": "storybook dev -p 6006",
@@ -15,6 +16,8 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
     "@kuzanatoliorg/prettier-config": "^1.2.0",
     "@solidjs/testing-library": "^0.7.1",
     "@storybook/addon-essentials": "7.0.18",
